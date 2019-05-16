@@ -1,0 +1,23 @@
+{
+  "name": "alek.be",
+  "main": "src/assets/scripts/index.ts",
+  "repository": "https://github.com/alekart/alek.be.git",
+  "author": "alek <aleksei.polechin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve": "yarn cleanTemp && parcel -p 9100 -d .tmp serve src/templates/index.njk --open",
+    "build": "yarn cleanDist && parcel build src/templates/index.njk",
+    "cleanDist": "node scripts/rimraf.js dist",
+    "cleanTemp": "node scripts/rimraf.js .tmp"
+  },
+  "devDependencies": {
+    "nunjucks": "^3.2.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-nunjucks": "^1.1.0",
+    "rimraf": "^2.6.3",
+    "sass": "^1.20.1",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.4.5"
+  }
+}
