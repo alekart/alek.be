@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "yarn cleanTemp && parcel -p 9100 -d .tmp serve src/templates/index.njk --open",
-    "build": "yarn cleanDist && parcel build src/templates/index.njk",
+    "build": "yarn cleanDist && parcel build --public-url ./ src/templates/index.njk && yarn cname",
+    "cname": "echo alek.be > dist/CNAME",
     "cleanDist": "node scripts/rimraf.js dist",
     "cleanTemp": "node scripts/rimraf.js .tmp"
   },
