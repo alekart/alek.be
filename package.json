@@ -5,13 +5,17 @@
   "author": "alek <aleksei.polechin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "yarn cleanTemp && parcel -p 9100 -d .tmp serve src/templates/index.njk --open",
-    "build": "yarn cleanDist && parcel build --public-url ./ src/templates/index.njk && yarn cname",
+    "serve": "run-s cleanTemp parcelServe",
+    "build": "run-s cleanDist parcelBuild cname buildRev",
+    "parcelServe": "parcel -p 9100 -d .tmp serve src/templates/index.njk --open",
+    "parcelBuild": "parcel build --public-url ./ src/templates/index.njk",
     "cname": "echo alek.be > dist/CNAME",
+    "buildRev": "node scripts/buildRev.js",
     "cleanDist": "node scripts/rimraf.js dist",
     "cleanTemp": "node scripts/rimraf.js .tmp"
   },
   "devDependencies": {
+    "git-rev-sync": "^1.12.0",
     "nunjucks": "^3.2.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-nunjucks": "^1.1.0",
