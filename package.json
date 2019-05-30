@@ -12,7 +12,8 @@
     "cname": "echo alek.be > dist/CNAME",
     "buildRev": "node scripts/buildRev.js",
     "cleanDist": "node scripts/rimraf.js dist",
-    "cleanTemp": "node scripts/rimraf.js .tmp"
+    "cleanTemp": "node scripts/rimraf.js .tmp",
+    "release": "node scripts/publish.js"
   },
   "devDependencies": {
     "git-rev-sync": "^1.12.0",
