@@ -6,17 +6,20 @@
   "license": "MIT",
   "scripts": {
     "serve": "run-s cleanTemp parcelServe",
-    "build": "run-s cleanDist parcelBuild cname buildRev",
+    "build": "run-s cleanDist parcelBuild postBuild",
     "parcelServe": "parcel -p 9100 -d .tmp serve src/templates/index.njk --open",
     "parcelBuild": "parcel build --public-url ./ src/templates/index.njk",
+    "postBuild": "run-p cname buildRev srcToDist",
     "cname": "echo alek.be > dist/CNAME",
     "buildRev": "node scripts/buildRev.js",
     "cleanDist": "node scripts/rimraf.js dist",
     "cleanTemp": "node scripts/rimraf.js .tmp",
+    "srcToDist": "cp ./src/*.* ./dist/",
     "release": "node scripts/publish.js"
   },
   "devDependencies": {
     "git-rev-sync": "^1.12.0",
+    "npm-run-all": "^4.1.5",
     "nunjucks": "^3.2.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-nunjucks": "^1.1.0",
