@@ -14,8 +14,8 @@ function onWindowResize() {
 
 function init() {
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xFFFFFF);
-  scene.fog = new THREE.FogExp2(0xFFFFFF, 0.003);
+  scene.background = new THREE.Color(0x990000);
+  scene.fog = new THREE.FogExp2(0x990000, 0.003);
   renderer = new THREE.WebGLRenderer({ antialias: false });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -37,24 +37,24 @@ function init() {
   // controls.maxDistance = 500;
   controls.maxPolarAngle = Math.PI / 2;
   // world
-  // var geometry = new THREE.BoxBufferGeometry( 1, 1, 1 );
-  // geometry.translate( 0, 0.5, 0 );
-  // var material = new THREE.MeshPhongMaterial( { color: 0xffffff, flatShading: true } );
-  // for ( var i = 0; i < 500; i ++ ) {
-  //   var mesh = new THREE.Mesh( geometry, material );
-  //   mesh.position.x = Math.random() * 1600 - 800;
-  //   mesh.position.y = 0;
-  //   mesh.position.z = Math.random() * 1600 - 800;
-  //   mesh.scale.x = 20;
-  //   mesh.scale.y = Math.random() * 80 + 10;
-  //   mesh.scale.z = 20;
-  //   mesh.updateMatrix();
-  //   mesh.matrixAutoUpdate = false;
-  //   scene.add( mesh );
-  // }
+  var geometry = new THREE.BoxBufferGeometry( 1, 1, 1 );
+  geometry.translate( 0, 0.5, 0 );
+  var material = new THREE.MeshPhongMaterial( { color: 0xffffff, flatShading: true } );
+  for ( var i = 0; i < 500; i ++ ) {
+    var mesh = new THREE.Mesh( geometry, material );
+    mesh.position.x = Math.random() * 1600 - 800;
+    mesh.position.y = 0;
+    mesh.position.z = Math.random() * 1600 - 800;
+    mesh.scale.x = 20;
+    mesh.scale.y = Math.random() * 80 + 10;
+    mesh.scale.z = 20;
+    mesh.updateMatrix();
+    mesh.matrixAutoUpdate = false;
+    scene.add( mesh );
+  }
 
   const geo = new THREE.PlaneBufferGeometry(2000, 2000, 8, 8);
-  const mat = new THREE.MeshBasicMaterial({ color: 0x222222, side: THREE.DoubleSide });
+  const mat = new THREE.MeshBasicMaterial({ color: 0x999999, side: THREE.DoubleSide });
   const plane = new THREE.Mesh(geo, mat);
   plane.rotateX(-Math.PI / 2);
 
