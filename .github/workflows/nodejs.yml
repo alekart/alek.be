@@ -1,6 +1,9 @@
 name: Node CI
 
-on: [push]
+on: 
+  push:
+    branches:
+    - alekart-patch-1
 
 jobs:
   build:
@@ -19,6 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        yarn install
+        npm install
+        npm run build --if-present
+        npm test
       env:
         CI: true
