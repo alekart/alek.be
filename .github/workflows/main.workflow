@@ -1,22 +1,22 @@
-workflow "New workflow" {
-  on = "push"
+workflow "Build and deploy on push" {
   resolves = ["release"]
+  on = "push"
 }
 
-action "yarn" {
+action "npm install" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  runs = "install"
+  runs = "npm run install"
 }
 
-action "yarn build" {
+action "build" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  needs = ["yarn"]
-  runs = "build"
+  runs = "npm run build"
+  needs = ["npm install"]
 }
 
 action "release" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  needs = ["yarn build"]
   secrets = ["GITHUB_TOKEN"]
-  runs = "release"
+  runs = "npm run release"
+  needs = ["build"]
 }
