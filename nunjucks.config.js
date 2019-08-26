@@ -5,7 +5,10 @@ fs = require('fs');
  * @type nunjucksConfiguration {{ data?: Object | string, env?: Environment | string, filters?: Object, options?: Object, root?: string | Array<string>}}
  */
 const nunjucksConfiguration = {
-  root: './src/templates',
+  root: [
+    './src/templates',
+    './src/templates/pages'
+  ],
   data: dataLoader,
   options: {
     noCache: true,
