@@ -1,15 +1,8 @@
 # alek.be portfolio website
 
-The personal portfolio website. 
-
-## Static website builder
-
-The project uses **[Parcel](https://parceljs.org)** to generate a static HTML website.    
-Configured with **[Nunjucks](https://mozilla.github.io/nunjucks/)**, **TypeScript** and **SASS**.
+Alek's personal portfolio website.
 
 # License/Copyright
 
-You **can** copy and use the code of the builder, configuration or scripts (node, yarn) for your own website.
-
-You **can not** copy/reproduce or use any graphics or content (svg, png, pdf, ...) related to alek or alek.be website.    
+You **CAN NOT** copy/reproduce or use any graphics or content (text, svg, pdf, images, ...) related to the author or alek.be website.    
 The content of the website is copyrighted to the author: Aleksei Polechin aka. alek.
