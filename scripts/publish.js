@@ -21,4 +21,4 @@ exec('mv ./dist/* ./');
 exec('git add -A');
 exec(`git commit -m "Publish website ${version}"`);
 exec('git push');
-exec('git checkout master');
+exec('git checkout main');
