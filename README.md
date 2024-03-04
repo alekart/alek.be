@@ -1,6 +1,6 @@
 # alek.be portfolio website
 
-The personal portfolio website. From paid php hosting (Wordpress® 🤦‍♂️) to free static GitHub pages. 
+The personal portfolio website. 
 
 ## Static website builder
 
