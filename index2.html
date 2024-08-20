@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alek - Aleksei Polecin - Front-end developer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <style>
+      * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: system-ui, Arial, Helvetica sans-serif;
+  color: black;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: white;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15dvh;
+  color: #404040;
+}
+
+.footer {
+  display: flex;
+  flex: 0 0 auto;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: rgb(136, 135, 135);
+}
+
+.alek-logo {
+  width: 90px;
+  animation: blink 0.3s forwards;
+  animation-delay: 0.55s;
+}
+
+.alek-logo-type {
+  display: block;
+  width: 180px;
+  margin-top: 40px;
+  animation: alek-in 0.6s both;
+  animation-delay: 1s;
+}
+
+svg {
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
+}
+
+.alek-logo:hover .one,
+.alek-logo:hover .two,
+.alek-logo:hover {
+  animation: none;
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+}
+
+.one {
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  animation: dash 0.3s ease-in-out forwards;
+  animation-delay: 0.25s;
+}
+
+.two {
+  stroke: currentColor;
+  stroke-width: 47px;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash 0.4s ease-in-out forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes alek-in {
+  from {
+    opacity: 0;
+    margin-top: 0;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 100%;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 100%;
+  }
+}
+
+    </style>
+    <div class="intro">
+      <svg
+        class="alek-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 80 80"
+      >
+        <defs>
+          <clipPath id="uuid-40fcbb06-c929-4495-98ca-9592140ec336">
+            <polygon
+              points="79.14 72.55 50.88 19.9 43.84 33.02 65.05 72.55 79.14 72.55"
+              style="fill: none"
+            />
+          </clipPath>
+          <clipPath id="uuid-ccb973af-102a-4d7b-baa1-1de3eff35584">
+            <polygon
+              points="21.2 60.9 49.89 7.45 35.8 7.45 .86 72.55 37.97 72.55 44.31 60.9 21.2 60.9"
+              style="fill: none"
+            />
+          </clipPath>
+        </defs>
+        <g style="clip-path: url(#uuid-40fcbb06-c929-4495-98ca-9592140ec336)">
+          <line
+            x1="45.14"
+            y1="20.95"
+            x2="76.14"
+            y2="77.95"
+            style="
+              fill: none;
+              stroke: currentColor;
+              stroke-miterlimit: 10;
+              stroke-width: 20px;
+            "
+            class="one"
+          />
+        </g>
+        <g style="clip-path: url(#uuid-ccb973af-102a-4d7b-baa1-1de3eff35584)">
+          <path
+            d="M48.14,66.73h-18.89c-8.23,0-13.51-8.74-9.68-16.03L44.14,3.95"
+            fill="none"
+            class="two"
+          />
+        </g>
+      </svg>
+      <div class="alek-logo-type">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.48 24.92">
+          <path
+            fill="currentColor"
+            d="M11.46 0 0 24.92h2.67l9.88-21.8 9.92 21.8h2.67L13.67 0h-2.21zM47.36 0H44.9v24.92h16.41v-2.28H47.36V0zM81.32 0h17.41v2.28H81.32zM81.32 11.15h17.41v2.25H81.32zM81.32 22.64h17.41v2.28H81.32zM128.8 11.37 139.81 0h-3.11l-11.07 11.41 11.79 13.51h3.06L128.8 11.37zM119.61 0h2.46v24.92h-2.46z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="footer">Copyright © Aleksei Polechin</div>
+  </body>
+</html>
