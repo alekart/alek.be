@@ -58,6 +58,7 @@
     }
     
     .alek-logo-type {
+      position: relative;
       display: block;
       width: 140px;
       margin-top: 10px;
@@ -185,6 +186,48 @@
           drop-shadow(0px 0px 15px rgba(255, 10, 100, 1));
       }
     }
+
+    .broken {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #111;
+      filter: none !important;
+      top: -2px;
+      left: 73px;
+      opacity: 0;
+      animation: broken 4s infinite;
+    }
+
+    @keyframes broken {
+      1% {
+        opacity: .9
+      }
+      2% {
+        opacity: 0
+      }
+      3% {
+        opacity: .3
+      }
+      4% {
+        opacity: .3
+      }
+      6% {
+        opacity: 0
+      }
+      8% {
+        opacity: 0
+      }
+      9% {
+        opacity: .6
+      }
+      12% {
+        opacity: .6
+      }
+      13% {
+        opacity: 0
+      }
+    }
   </style>    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -238,18 +281,22 @@
           />
         </g>
       </svg>
+    </div>
+
       <div class="alek-logo-type">
+        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 140.48 24.92"
           alt="alek"
+          class="svg-shadow"
         >
           <path
             fill="currentColor"
             d="M11.46 0 0 24.92h2.67l9.88-21.8 9.92 21.8h2.67L13.67 0h-2.21zM47.36 0H44.9v24.92h16.41v-2.28H47.36V0zM81.32 0h17.41v2.28H81.32zM81.32 11.15h17.41v2.25H81.32zM81.32 22.64h17.41v2.28H81.32zM128.8 11.37 139.81 0h-3.11l-11.07 11.41 11.79 13.51h3.06L128.8 11.37zM119.61 0h2.46v24.92h-2.46z"
           />
         </svg>
-      </div>
+        <div class="broken"></div>
         
       </div>
       <div class="who-i-am">
