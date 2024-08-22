@@ -84,6 +84,7 @@ a.profile-link {
   &--two {
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
+    stroke-width: 110px;
     animation: dash 0.3s ease-in-out forwards;
     animation-delay: 0.25s;
   }
