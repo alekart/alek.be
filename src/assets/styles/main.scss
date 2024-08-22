@@ -130,3 +130,12 @@ a {
 .broken {
   animation: broken 4s infinite;
 }
+
+.btn, button, a.btn {
+  display: inline-block;
+  margin: 15px 0 30px;
+  padding: 6px 10px;
+  color: $color-neutral-darkest;
+  background-color: $primary;
+  font-size: 14px;
+}
