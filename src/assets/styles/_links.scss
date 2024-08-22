@@ -3,10 +3,10 @@
 a,
 a:visited,
 a:active {
-  color: $link-color;
-  text-decoration: underline;
+  color: $text-color;
+  text-decoration: none;
 }
 
 a:hover {
-  color: $link-hover-color;
+  //color: $link-hover-color;
 }

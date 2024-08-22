@@ -2,17 +2,21 @@ $color-neutral-darkest: #111;
 $color-neutral-dark: #222;
 $color-neutral: #444;
 $color-neutral-light: #666;
-$color-neutral-lighter: #999;
+$color-neutral-lighter: #888;
+$color-neutral-lightest: #bebebe;
+
+$primary: #FFDD45;
+$secondary: #FF0A64;
 
 $color-light: #FFF;
 $color-dark: $color-neutral-dark;
 
-$text-color: $color-dark;
+$text-color: $primary;
 
 $link-color: $color-neutral-lighter;
 $link-hover-color: $color-neutral;
 
-$font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 $font-size: 16px;
 $font-size-h1: 2em;
 

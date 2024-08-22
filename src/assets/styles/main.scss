@@ -5,17 +5,18 @@
 @import "links";
 @import "skills";
 @import "footer";
+@import "animations";
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
 
   color: $text-color;
   font-family: $font-family;
   font-size: $font-size;
 
-  background-color: $color-light;
+  background-color: $color-neutral-darkest;
 }
 
 main {
@@ -24,8 +25,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  padding-bottom: 10vh;
+  padding-bottom: 5dvh;
 }
 
 a.profile-link {
@@ -33,69 +33,99 @@ a.profile-link {
   margin: 0 10px;
   font-size: 40px;
   text-decoration: none;
+  color: inherit;
 }
 
-
-.logo,
-.social-links {
-  text-align: center;
-}
-
-.social-links {
-}
-
-.logo {
+.logo-full {
   display: flex;
-  margin-bottom: 40px;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.logo__image {
-  width: 67.8px * 2;
-  height: 56.4px * 2;
+.alek-logo {
+  width: 90px;
+  animation: blink 0.3s forwards;
+  animation-delay: 0.55s;
 
-  &--old {
-    width: 65px;
-    height: 65px;
-  }
+  &:hover {
+    animation: none;
 
-  @media (min-width: $screen-lg) {
-    &--old {
-      width: 90px;
-      height: 90px;
+    .logo-line {
+      animation: none;
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
     }
   }
 }
 
-.logo__name {
+.alek-logo-type {
+  position: relative;
   display: block;
-  margin-left: .4em;
-  font-size: 50px;
-  letter-spacing: -.06em;
-  text-align: center;
-
-  @media (min-width: $screen-lg) {
-    font-size: 65px;
-  }
+  width: 140px;
+  margin-top: 10px;
+  animation: alek-in 0.6s both;
+  animation-delay: 1s;
 }
 
-.logo__real-name {
-  display: block;
-  margin-top: -.4em;
-  padding-left: .03em;
-  font-size: .22em;
-  letter-spacing: normal;
-  color: $color-neutral-lighter;
-}
-
-.job-title {
+.skills {
   font-size: 11px;
-  color: #9e9e9e;
-  letter-spacing: 3px;
-  margin-bottom: 40px;
+  color: $color-neutral-lightest;
+}
 
-  @media (min-width: $screen-lg) {
-    font-size: 12px;
-    letter-spacing: 6px;
+.svg-shadow {
+  filter: drop-shadow(0px 0px 3px rgba($primary, 0.5)) drop-shadow(0px 0px 10px $secondary);
+  animation: glow 1s infinite alternate-reverse ease-in-out;
+}
+
+.logo-line {
+  stroke: currentColor;
+
+  &--two {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: dash 0.3s ease-in-out forwards;
+    animation-delay: 0.25s;
   }
+
+  &--one {
+    stroke-width: 110px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 0.55s ease-in-out forwards;
+  }
+}
+
+a {
+  transition: filter 0.3s;
+
+  &:hover {
+    color: inherit;
+    filter: drop-shadow(0px 0px 3px rgba($primary, 0.5)) drop-shadow(0px 0px 10px $secondary);
+  }
+}
+
+.who-i-am {
+  margin-top: 70px;
+  font-size: 13px;
+  text-align: center;
+  animation: alek-in 0.6s both;
+  animation-delay: 2s;
+}
+
+.job,
+.name {
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.name {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  letter-spacing: 0.128em;
+}
+
+.broken {
+  animation: broken 4s infinite;
 }
