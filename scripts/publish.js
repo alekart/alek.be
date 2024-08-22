@@ -13,7 +13,7 @@ const version = git.isTagDirty()
   ? `@ ${git.short()}`
   : `@ v${git.tag()}`;
 
-exec('yarn build');
+exec('npm run build');
 exec('git checkout gh-pages');
 exec('git reset origin/gh-pages --hard');
 exec('git rm -r -f --ignore-unmatch ./*');
