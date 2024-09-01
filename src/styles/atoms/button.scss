@@ -1,0 +1,21 @@
+$button-text-color: $color-neutral-darkest;
+
+.btn,
+button,
+a.btn {
+  display: inline-block;
+  margin: 15px 0 30px;
+  padding: 6px 10px;
+  color: $button-text-color;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: $primary;
+}
+
+a.btn {
+  &:hover,
+  &:visited,
+  &:active {
+    color: $button-text-color;
+  }
+}

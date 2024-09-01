@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+// @import "normalize";
+@import "./styles/sr-only";
+@import "./styles/variables";
+@import "./styles/icon";
+@import "./styles/animations";
+@import "./styles/atoms";
+@import "./styles/utils";
+
+body {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size;
+
+  background-color: $color-neutral-darkest;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
