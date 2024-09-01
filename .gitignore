@@ -1,6 +1,7 @@
 ### ParcelJS ###
 /.cache
 /.tmp
+/.angular
 
 # Created by https://www.gitignore.io/api/osx,angular,pycharm+iml,jetbrains+iml
 # Edit at https://www.gitignore.io/?templates=osx,angular,pycharm+iml,jetbrains+iml
