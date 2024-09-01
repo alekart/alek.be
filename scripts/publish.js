@@ -17,7 +17,7 @@ exec('npm run build');
 exec('git checkout gh-pages');
 exec('git reset origin/gh-pages --hard');
 exec('git rm -r -f --ignore-unmatch ./*');
-exec('mv ./dist/* ./');
+exec('mv ./dist/alk/browser/* ./');
 exec('git add -A');
 exec(`git commit -m "Publish website ${version}"`);
 exec('git push');
