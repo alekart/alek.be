@@ -1,0 +1,26 @@
+$color-neutral-darkest: #111;
+$color-neutral-dark: #222;
+$color-neutral: #444;
+$color-neutral-light: #666;
+$color-neutral-lighter: #888;
+$color-neutral-lightest: #bebebe;
+
+$primary: #FFDD45;
+$secondary: #FF0A64;
+
+$color-light: #FFF;
+$color-dark: $color-neutral-dark;
+
+$text-color: $primary;
+
+$link-color: $primary;
+$link-hover-color: $link-color;
+
+$font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+$font-size: 16px;
+$font-size-h1: 2em;
+
+$screen-lg: 768px;
+
+$svg-shadow-filter: drop-shadow(0px 0px 3px rgba($primary, 0.5)) drop-shadow(0px 0px 10px $secondary);
+$svg-shadow-animation: glow 1s infinite alternate-reverse ease-in-out;

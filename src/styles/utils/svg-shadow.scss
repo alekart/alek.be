@@ -1,0 +1,6 @@
+@import "../variables";
+
+.svg-shadow {
+  filter: $svg-shadow-filter;
+  animation: $svg-shadow-animation;
+}

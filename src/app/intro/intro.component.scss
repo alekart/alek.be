@@ -1,0 +1,89 @@
+@import "../../styles/variables.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.alek-logo {
+  width: 90px;
+  animation: blink 0.3s forwards;
+  animation-delay: 0.55s;
+
+  &:hover {
+    animation: none;
+
+    .logo-line {
+      animation: none;
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.alek-logo-type {
+  position: relative;
+  display: block;
+  width: 140px;
+  margin-top: 10px;
+  animation: alek-in 0.6s both;
+  animation-delay: 1s;
+}
+
+.skills {
+  font-size: 11px;
+  color: $color-neutral-lightest;
+}
+
+.logo-line {
+  stroke: currentColor;
+
+  &--two {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    stroke-width: 110px;
+    animation: dash 0.3s ease-in-out forwards;
+    animation-delay: 0.25s;
+  }
+
+  &--one {
+    stroke-width: 110px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 0.55s ease-in-out forwards;
+  }
+}
+
+
+.who-i-am {
+  margin-top: 70px;
+  font-size: 13px;
+  text-align: center;
+  animation: alek-in-2 0.6s both;
+  animation-delay: 2s;
+}
+
+.job,
+.name {
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.name {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  letter-spacing: 0.128em;
+}
+
+.broken {
+  animation: broken 4s infinite;
+}

@@ -1,0 +1,14 @@
+@import "../variables";
+
+a,
+a:visited,
+a:active {
+  color: $text-color;
+  text-decoration: none;
+  transition: filter 0.3s;
+}
+
+a:hover {
+  color: $link-hover-color;
+  filter: $svg-shadow-filter;
+}
