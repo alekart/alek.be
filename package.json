@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:alk": "node dist/alk/server/server.mjs"
+    "serve:ssr:alk": "node dist/alk/server/server.mjs",
+    "release": "node scripts/publish.js"
   },
   "private": true,
   "dependencies": {
