@@ -1,0 +1,142 @@
+{
+  "info": {
+    "name": "Aleksei Polechin",
+    "title": "Frontend Developer",
+    "contact": [
+      {
+        "title": "Phone",
+        "text": "+32 (0) 479 47 52 39"
+      },
+      {
+        "title": "Email",
+        "email": ["aleksei.polechin", "gmail.com"]
+      },
+      {
+        "title": "Location",
+        "text": "Berloz, 4257 — Belgium"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/in/aleksei-p"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/alekart"
+      },
+      {
+        "title": "Web",
+        "url": "https://alek.be"
+      }
+    ]
+  },
+  "intro": "Experienced Software Developer adept in bringing forth expertise in design, installation, testing and maintenance of web based software systems. Able to effectively self-manage during independent projects, as well as collaborate as part of a productive team.",
+  "skills": [
+    "Angular",
+    "TypeScript",
+    "NodeJS",
+    "JavaScript",
+    "HTML5 + CSS3 (SCSS)",
+    "Adobe Suite"
+  ],
+  "sections": [
+    {
+      "title": "Employment history",
+      "timeline": [
+        {
+          "start": 2022,
+          "title": "Senior Frontend Developer at DigitalCode SPRL",
+          "descr": [
+            "Analysis and development of various external and internal projects.",
+            "Development of internal tools and automation scripts"
+          ],
+          "location": "Brussels, Liège",
+          "duration": "9+ years"
+        },
+        {
+          "start": 2011,
+          "end": 2012,
+          "title": "Web Developer/Graphic Designer at Defour Graphic Design",
+          "descr": [
+            "Backend and Frontend development in PHP/HTML/CSS/JS.",
+            "Creation of logos, print and web designs"
+          ],
+          "location": "Liège",
+          "duration": "1½ years"
+        }
+      ]
+    },
+    {
+      "title": "Projects",
+      "timeline": [
+        {
+          "start": 2022,
+          "title": "Qualitics.ai",
+          "descr": [
+            "Lead frontend for a SaaS data driven web app.",
+            "[Angular, TypeScript, THREE JS, Electron, NODE JS]"
+          ],
+          "duration": "2+ years"
+        },
+        {
+          "start": 2019,
+          "end": 2022,
+          "title": "SPF Justice",
+          "descr": ["Lead frontend for confidential data driven web app and Chrome extension.",
+          "[Angular, TypeScript, JavaScript]"],
+          "duration": "3 years"
+        },
+        {
+          "start": 2015,
+          "end": 2018,
+          "title": "Euroconsumer (Test-Achats, Altroconsumo, ...) ",
+          "descr": [
+            "Lead frontend for confidential data driven web app and Chrome extension.",
+            "[Angular, TypeScript, JavaScript]"
+          ],
+          "duration": "4 years"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "languages": {
+        "max": 5,
+        "items": [
+          ["French", 5],
+          ["English", 4],
+          ["Russian", 5]
+        ]
+      }
+    },
+    {
+      "title": "Education",
+      "timeline": [
+        {
+          "start": 2022,
+          "end": 2015,
+          "title": "Bachelor in Computer Science",
+          "descr": ["Haute École de la Province de Liège (HEPL)"],
+          "location": "Seraing",
+          "duration": "1½ years"
+        },
+        {
+          "start": 2009,
+          "end": 2010,
+          "title": "Bachelor in Graphic Design",
+          "descr": ["École de Recherche Graphique (ERG)"],
+          "location": "Brussels",
+          "duration": "1 year"
+        },
+        {
+          "start": 2006,
+          "end": 2009,
+          "title": "Diploma: Bachelor in Graphic Design",
+          "descr": ["École Supérieure des Arts Saint-Luc de Liège"],
+          "location": "Liège",
+          "diploma": true,
+          "duration": "3 years"
+        }
+      ]
+    }
+  ]
+}

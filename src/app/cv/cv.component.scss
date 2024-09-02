@@ -1,0 +1,136 @@
+:host {
+  max-width: 800px;
+  line-height: 1.4em;
+}
+
+.cv-header {
+  margin-bottom: 2em;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 1em;
+
+    > span {
+      display: block;
+      font-size: .6em;
+      line-height: 1.6em;
+      font-weight: 500;
+    }
+ }
+}
+
+.at-placeholder {
+  display: inline-block;
+  text-indent: -10em;
+  width: 1em;
+  vertical-align: middle;
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: "@";
+    text-indent: 0;
+  }
+}
+
+h2 span {
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 3px solid currentColor;
+}
+
+.col-2-list {
+  flex: 1 1 auto;
+  columns: 2;
+}
+
+section {
+  display: flex;
+  margin-bottom: 1.8em;
+
+  h2 {
+    margin: 0;
+    width: 200px;
+  }
+
+  &.timeline {
+   display: block;
+
+   h2 {
+    width: auto;
+    margin-bottom: 1em;
+   }
+  }
+}
+
+.cv-contact {
+  columns: 2;
+
+  > li {
+    display: flex;
+  }
+
+  .label {
+    font-weight: bold;
+    width: 100px;
+  }
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: .7em;
+}
+
+.timeline-date {
+  width: 200px;
+  line-height: 1em;
+}
+
+.timeline-duration {
+  display: block;
+  font-size: 0.8em;
+}
+
+.tl-title {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+  .tl-descr {
+    display: block;
+    margin: 0;
+  }
+
+
+.langs {
+
+}
+
+.lang-item {
+  display: flex;
+  flex: 1 1 50%;
+
+  > span:first-child {
+    width: 90px;
+  }
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  > span {
+    display: block;
+    background-color: currentColor;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    height: 0.8em;
+    width: 0.8em;
+
+    &.empty {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@if (data) {
+<div class="cv-header">
+  <h1>
+    {{ data.info.name }}
+    <span>{{ data.info.title }}</span>
+  </h1>
+  <ul class="cv-contact unstyled-list">
+    @for (item of data.info.contact; track item){
+    <li>
+      <span class="label">{{ item.title }}</span>
+      <ng-container
+        *ngTemplateOutlet="contactItem; context: { $implicit: item }"
+      ></ng-container>
+    </li>
+    }
+  </ul>
+  <p>{{ data.intro }}</p>
+</div>
+<section>
+  <h2><span>Skills</span></h2>
+  <ul class="skills-list unstyled-list col-2-list">
+    @for (skill of data.skills; track skill) {
+    <li>{{ skill }}</li>
+    }
+  </ul>
+</section>
+@for (section of data.sections; track section) {
+<ng-container
+  *ngTemplateOutlet="sectionTmpl; context: { $implicit: section }"
+></ng-container>
+} } @else { Fallback PDF here }
+
+<ng-template #contactItem let-item>
+  @if (item.url) {
+  <a [href]="item.url" target="_blank" [appClick]="item.title + ' Link'">{{
+    item.url
+  }}</a>
+  } @else if (item.email) {
+  <span
+    ><span>{{ item.email[0] }}</span
+    ><span class="at-placeholder">(at)</span
+    ><span>{{ item.email[1] }}</span></span
+  >
+  } @else {
+  <span>{{ item.text }}</span>
+  }
+</ng-template>
+
+<ng-template #sectionTmpl let-section>
+  <section [class.timeline]="section.timeline">
+    <h2>
+      <span>{{ section.title }}</span>
+    </h2>
+    @if (section.timeline) {
+    <ng-container
+      *ngTemplateOutlet="timelineSection; context: { $implicit: section }"
+    ></ng-container>
+    } @else {
+    <ng-container
+      *ngTemplateOutlet="langSection; context: { $implicit: section }"
+    ></ng-container>
+    }
+  </section>
+</ng-template>
+
+<ng-template #langSection let-section>
+  <ul class="langs unstyled-list col-2-list">
+    @for (lang of section.languages.items; track lang) {
+    <li class="lang-item">
+      <span>{{ lang[0] }}</span>
+      <span class="level">
+        @for (lvl of [].constructor(section.languages.max); track $index) {
+        <span [class.empty]="$index + 1 > lang[1]"></span>
+        }
+      </span>
+    </li>
+    }
+  </ul>
+</ng-template>
+
+<ng-template #timelineSection let-section>
+  <ul class="section-timeline unstyled-list">
+    @for (item of section.timeline; track $index) {
+    <li class="timeline-item">
+      <div class="timeline-date">
+        {{ item.start }} - @if (item.end) {
+        {{ item.end }}
+        } @else { Present }
+        <span class="timeline-duration">
+          {{ item.duration }}
+          @if (item.diploma) {
+          <br />Diploma in {{ item.end }}
+          }
+        </span>
+      </div>
+      <div class="tl-content" [class.no-role]="!item.role">
+        <h3 class="tl-title">{{ item.title }}</h3>
+        @for (line of item.descr; track line) {
+        <p class="tl-descr">{{ line }}</p>
+        }
+      </div>
+    </li>
+    }
+  </ul>
+</ng-template>
