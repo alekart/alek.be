@@ -4,12 +4,8 @@
     "title": "Frontend Developer",
     "contact": [
       {
-        "title": "Phone",
-        "text": "+32 (0) 479 47 52 39"
-      },
-      {
         "title": "Email",
-        "email": ["aleksei.polechin", "gmail.com"]
+        "email": ["contact", "alek.be"],
       },
       {
         "title": "Location",
@@ -25,7 +21,9 @@
       },
       {
         "title": "Web",
-        "url": "https://alek.be"
+        "url": "https://alek.be",
+        "hide": true,
+        "showPdf": true
       }
     ]
   },
@@ -33,6 +31,7 @@
   "skills": [
     "Angular",
     "TypeScript",
+    "React",
     "NodeJS",
     "JavaScript",
     "HTML5 + CSS3 (SCSS)",
